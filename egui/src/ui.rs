@@ -1408,7 +1408,7 @@ impl Ui {
     /// A [`CollapsingHeader`] that starts out collapsed.
     pub fn collapsing<R>(
         &mut self,
-        heading: impl ToString,
+        heading: impl Into<WidgetText>,
         add_contents: impl FnOnce(&mut Ui) -> R,
     ) -> CollapsingResponse<R> {
         CollapsingHeader::new(heading).show(self, add_contents)
